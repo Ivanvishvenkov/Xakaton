@@ -1,0 +1,185 @@
+/* Основные стили для страницы */
+
+/* Левое меню */
+.sidebar {
+    width: 200px;
+    background-color: #6241f8; /* Фиолетовый фон */
+    padding: 20px;
+    position: fixed;
+    height: 100vh; /* Высота на весь экран */
+    top: 0;
+    left: 0;
+}
+.logo {
+    font-size: 24px;
+    color: white;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+.sidebar a {
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+    display: block;
+    padding: 10px 0;
+    transition: all 0.3s ease;
+    opacity: 0.8; /* Начальное затухание */
+    margin: 20px;
+}
+
+.sidebar a:hover {
+    color: rgba(255, 255, 255, 0.7); /* Затухание цвета */
+    padding-left: 15px; /* Текст смещается вправо при наведении */
+    opacity: 1; /* Полная яркость при наведении */
+}
+
+/* Профиль */
+.profile-photo {
+    text-align: center;
+    padding-top: 10px;
+    margin-right: 30px;
+}
+
+.photo-large {
+    width: 180px;
+    height: 183px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-left: 126px;
+    
+}
+
+/* Сетка с информацией */
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Сетка на 3 колонки */
+    gap: 20px;
+    padding-left: 220px; /* Отступ от левого меню */
+    margin: 20px;
+}
+
+.info-item {
+    background-color: rgb(221 221 221);
+    padding: 10px 15px;
+    margin-bottom: 10px;
+    border-radius: 50px;
+    box-shadow: 0 0 10px rgb(112, 112, 112);
+    display: flex;
+    align-items: center;
+}
+
+/* Кнопка "История заказов" */
+.history-button {
+    background-color: #5D44F8;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    width: 1479px;
+    height: 39px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    display: block;
+    margin-left: 313px;
+}
+
+.history-button:hover {
+    background-color: #5cbf8a;
+    transform: scale(1.05);
+}
+
+.history-button:active {
+    transform: scale(0.95);
+}
+
+/* Блоки проектов */
+.project-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Сетка на два столбца */
+    gap: 20px;
+    padding-left: 220px; /* Отступ от левого меню */
+    margin: 20px;
+}
+
+.project-item {
+    background-color: rgb(221 221 221);
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 10px;
+    position: relative; /* Для позиционирования статуса */
+    transition: transform 0.3s, box-shadow 0.3s; /* Плавная анимация при наведении */
+    cursor: pointer; /* Курсор указателя при наведении */
+    box-shadow: 0 0 10px rgb(112, 112, 112)
+}
+
+/* Анимация при наведении на блок */
+.project-item:hover {
+    transform: translateY(-5px); /* Блок слегка поднимается */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* Тень при наведении */
+}
+
+/* Анимация заголовка проекта */
+.project-item h3 {
+    transition: transform 0.3s, color 0.3s; /* Плавное изменение */
+}
+
+.project-item:hover h3 {
+    transform: translateY(-5px); /* Заголовок поднимается при наведении */
+    color: #6A5ACD; /* Изменение цвета заголовка */
+}
+
+/* Метка статуса проекта (выполнен или в процессе) */
+.status-label {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.in-progress {
+    background-color: #FFD700; /* Желтый для "В процессе" */
+    color: black;
+}
+
+.completed {
+    background-color: #6ED0A1; /* Зеленый для "Выполнен" */
+    color: white;
+}
+
+.profile-container {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    background-color: #f3f3f3;
+    border-radius: 10px;
+    width: 80%; /* Ширина контейнера */
+    margin: 0 auto; /* Центрирование блока */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Легкая тень */
+}
+
+.info-columns {
+    display: flex;
+    flex-wrap: nowrap; /* Отключение переноса строк */
+    justify-content: space-between; /* Разделение двух столбцов */
+    width: 48%;
+    margin-left: 60px;
+}
+
+.info-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.info-item::before {
+    content: '✏️'; /* Добавить иконку рядом с текстом */
+    margin-right: 10px;
+    font-size: 18px;
+    color: #6A5ACD;
+}
+
+

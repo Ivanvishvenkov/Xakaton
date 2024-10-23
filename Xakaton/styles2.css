@@ -1,0 +1,257 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    display: flex;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 250px;
+    background-color: #6241f8;
+    color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.menu ul {
+    list-style-type: none;
+}
+
+.menu li {
+    margin: 36px 0;
+    cursor: pointer;
+    font-size: 18px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.menu li:hover {
+    transform: translateX(10px);
+    opacity: 0.8;
+}
+
+/* Divider */
+.divider {
+    width: 166px ;
+    height: 1px;
+    background-color: white;
+    margin: 10px 0;
+}
+
+/* Main Content */
+.main-content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 20px;
+}
+
+/* Header (Search and Profile in the top right corner) */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.search-bar {
+    width: 40%;
+    padding: 10px;
+    border-radius: 20px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+}
+
+.profile {
+    position: absolute;
+    top: 20px;
+    right: 50px;
+    display: flex;
+    align-items: center;
+}
+
+.profile-img {
+    width: 45px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+    padding-left: 7px;
+}
+
+.profile-name {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 5px;;
+}
+
+/* Projects Section */
+.projects-section {
+    flex: 2;
+    margin-right: 20px;
+}
+
+.projects-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.status-filter {
+    display: flex;
+    align-items: center;
+    margin-right: 830px;
+}
+
+.status-filter select {
+    margin-left: 10px;
+    padding: 5px;
+    border-radius: 13px;
+}
+
+.project-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 800px;
+}
+
+.project-card {
+    background-color: rgb(221 221 221);
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 10px;
+    position: relative; /* Для позиционирования статуса */
+    transition: transform 0.3s, box-shadow 0.3s; /* Плавная анимация при наведении */
+    cursor: pointer; /* Курсор указателя при наведении */
+    box-shadow: 0 0 10px rgb(112, 112, 112)
+
+}
+.project-card:hover {
+    transform: translateY(-5px); /* Блок слегка поднимается */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* Тень при наведении */
+}
+.project-card h3 {
+    margin-bottom: 10px;
+}
+
+.dots-icon {
+    cursor: pointer;
+    font-size: 24px;
+    color: #888;
+}
+
+/* Messenger Section */
+.messenger {
+     background-color: rgb(221 221 221);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgb(112, 112, 112);
+    margin-left: 20px;
+    width: 500px; /* Adjust width */
+    position: absolute;
+    top: 0; /* Поднимает блок к верхней части его контейнера */
+    margin-left: 890px;
+    margin-top: 129px;
+    height: 797px;
+}
+
+.messenger h2 {
+    margin-bottom: 0;
+    margin-left: 161px;
+}
+
+.messenger h1 {
+    margin-bottom: 35px;
+    margin-top: -17px;
+    /* Поиск чата... */
+  width: 61px;
+  height: 13px;
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 13px;
+  color: #A2A4A9;
+  /* Inside auto layout */
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+  margin-left: 15px;
+
+}
+.chat .user {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.i.down{
+    margin-right: 8px;
+    vertical-align: middle; /* Выравнивание по вертикали */
+}
+.chat .user:hover {
+    background-color: #f1f1f1;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.chat .user img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.chat .user-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.chat .user-info span {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.chat .user-info p {
+    font-size: 14px;
+    color: #888;
+}
+.task-status {
+    display: inline-block;
+    background-color: #ffd700;
+    padding: 3px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+    margin-right: 10px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+.task-status.active {
+    background-color: #43C45D;
+    color: white;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
